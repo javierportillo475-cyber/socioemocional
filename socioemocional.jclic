@@ -20,6 +20,7 @@
   <item name="Crucigrama socioemocional" />
   <item name="CRUCIGRAMA SOCIOEMOCIONAL" />
   <item name="emociones" />
+  <item name="texto 1" />
  </sequence>
  <activities>
   <activity class="@textGrid.CrossWord" name="CRUCIGRAMA SOCIOEMOCIONAL">
@@ -49,6 +50,43 @@
     <ids>0 1 2</ids>
    </cells>
    <layout position="AB" />
+  </activity>
+  <activity class="@text.Complete" name="texto 1" code="">
+   <description />
+   <messages />
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <size width="402" height="300" />
+    </window>
+   </settings>
+   <checkButton>Evaluación</checkButton>
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" tabWidth="12" size="11" bold="false" italic="false" />
+    <section>
+     <p name="default" family="Arial" background="0xFFFFFF" tabWidth="12" />
+     <p name="default" family="Arial" background="0xFFFFFF" tabWidth="12" />
+     <p name="default" family="Arial" background="0xFFFFFF" tabWidth="12" Alignment="1">
+      <cell width="200" height="200" image="carita feliz-resized.jpg">
+       <style borderStroke="0.7" markerStroke="5.0">
+        <color background="0xFFFFFF" />
+       </style>
+      </cell>
+     </p>
+     <p name="default" family="Arial" background="0xFFFFFF" tabWidth="12" Alignment="1">
+      <text size="24" family="Century Gothic">La </text>
+      <target>empatia</target>
+      <text size="24" family="Century Gothic"> en un val</text>
+      <text size="24">or</text>
+      <text size="24" family="Century Gothic"> que implica ponerse en los zapatos del otro.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" checkAccents="false" checkPunctuation="false" />
   </activity>
   <activity class="@textGrid.CrossWord" name="Crucigrama socioemocional" code="">
    <description />
